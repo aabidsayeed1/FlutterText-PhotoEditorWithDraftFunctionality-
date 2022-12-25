@@ -120,7 +120,7 @@ class _MatrixGestureDetectorState extends State<MatrixGestureDetector> {
 
   @override
   Widget build(BuildContext context) {
-    matrix =widget.setMatrix!=null? widget.setMatrix!:Matrix4.identity();
+    matrix = widget.setMatrix != null ? widget.setMatrix! : Matrix4.identity();
     Widget child =
         widget.clipChild ? ClipRect(child: widget.child) : widget.child;
     return GestureDetector(
@@ -158,7 +158,6 @@ class _MatrixGestureDetectorState extends State<MatrixGestureDetector> {
 
   void onScaleUpdate(ScaleUpdateDetails details) {
     widget.onScaleStart();
-
     translationDeltaMatrix = Matrix4.identity();
     scaleDeltaMatrix = Matrix4.identity();
     rotationDeltaMatrix = Matrix4.identity();
